@@ -1,6 +1,6 @@
 package Assignment2;
 import java.util.Scanner;
-public abstract class AdvertisementAndMarketing {
+public abstract class AdvertisementAndMarketing {		//Abstraction
 	
 	Scanner input = new Scanner(System.in);
 	String method1, method2, method3, offlineAdvertisement, celebritySpokeman;
@@ -48,8 +48,8 @@ public abstract class AdvertisementAndMarketing {
 	public String method3(String celebritySpokeman, int Spokeman) {
 		return Spokeman + ".\t" +celebritySpokeman;
 	}
-	public void printCostOfAdvertisment() {
-		System.out.println("\n---------------------Method of Advertisement---------------------\n1\t Online Advertisement\n2\t Offline Advertisment\n3\t Spokeman");
+	public void printInfo() {		//Polymorphism
+		System.out.println("\n----------Method of Advertisement------------\n1\t Online Advertisement\n2\t Offline Advertisment\n3\t Spokeman\n");
 		System.out.println("Method 1 :" );
 		method1();
 		costOfAdvertisment = 10000;

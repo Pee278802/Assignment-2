@@ -1,6 +1,6 @@
 package Assignment2;
 
-public abstract class CarRacing extends typeOfRacing{
+public abstract class CarRacing{		//Abstraction
 	protected String name, location, businessHours, requirement;
 	
 	public void detailOfCompany(String name, String location, String requirement, String businessHours) {
@@ -17,11 +17,9 @@ public abstract class CarRacing extends typeOfRacing{
 		System.out.println("Location\t:" + this.location);
 		System.out.println("Requirement\t:" + this.requirement);
 		System.out.println("Business Hours\t:" + this.businessHours);
-		typeOfRacing();
-
 	}
 	
-	public void printDetail() {
+	public void printInfo() {		//Polymorphism
 		printDetailOfCompany();
 	}
 }

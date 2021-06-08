@@ -2,7 +2,7 @@ package Assignment2;
 
 import java.util.Scanner;
 
-public class EmployeeManagement extends CarRacing{
+public class EmployeeManagement extends CarRacing{ //Inheritance
 	Scanner input = new Scanner(System.in);
 	protected String employeeName, email, position, username, password, newPassword, comfirmPassword;
 	protected int age, TAC, option;
@@ -11,7 +11,6 @@ public class EmployeeManagement extends CarRacing{
 	protected String confirmPassword;
 	
 	public void EmployeeManagementSystem() {
-		printDetailOfCompany();
 		System.out.println("-----------------EMPLOYEE MANAGEMENT SYSTEM---------------------");
 		System.out.println("Option 1\t\t" + ":Add New Employee");
 		System.out.println("Option 2\t\t" + ":Employee Login");
@@ -22,7 +21,7 @@ public class EmployeeManagement extends CarRacing{
 		switch (option) {
 			case 1:
 				AddEmployee();
-				printDetail();
+				printInfo();
 				break;
 			
 			case 2:
@@ -36,14 +35,9 @@ public class EmployeeManagement extends CarRacing{
 			case 4:
 				deleteEmployee();
 		}
-	//a.AddEmployee();
-	//a.printDetail();
-	//a.forgetPassword(13579);
-	//a.deleteEmployee();
 	
 	}
 		public void AddEmployee() {
-			printDetailOfCompany();
 			System.out.println("-------------------Add Employee---------------");
 			System.out.print("Enter the name: ");
 			this.employeeName = input.next();
@@ -59,7 +53,6 @@ public class EmployeeManagement extends CarRacing{
 		return;
 		}
 		public void Login() {
-			printDetailOfCompany();
 			System.out.println("-------------------Employee Login---------------");
 			System.out.print("Username\t\t:");
 			this.username = input.next();
@@ -71,7 +64,7 @@ public class EmployeeManagement extends CarRacing{
 					System.out.println("Please try again.");
 				}
 		}
-		public void printDetail() {
+		public void printInfo() {		//Polymorphism
 			System.out.format(" Name " + "\t\t :" + this.employeeName + "\n Age " + "\t\t :" + this.age + "\n Contact No " + "\t :" + this.contactNo + "\n Possition " + "\t :" + this.position + "\n Salary " + "\t :%.2f\"", this.salary);
 		}	
 		public void forgetPassword(int TAC) {
@@ -123,7 +116,7 @@ public class EmployeeManagement extends CarRacing{
 			System.out.print("Enter salary: ");
 			this.salary = input.nextDouble();
 			
-			printDetail();
+			printInfo();
 			
 			System.out.println("\nThe employee has been deleted.");
 			
