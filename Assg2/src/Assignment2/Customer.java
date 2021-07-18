@@ -22,7 +22,7 @@ public class Customer extends CarRacing implements Payment{	//Inheritance
 			this.email = input.next();
 			System.out.print("Enter contact no: ");
 			this.contactNo = input.nextLong();
-			System.out.println("Type of racing:");
+			System.out.print("Type of racing: ");
 			this.typeOfRacing = input.next();
 			printInfo();
 			printRegistration();
@@ -42,16 +42,18 @@ public class Customer extends CarRacing implements Payment{	//Inheritance
 	}
 	
 	public void printInfo() {	//Polymorphism
-		System.out.println("Name:\t" + this.name);
-		System.out.println("IC no:\t" + this.icNo);
-		System.out.println("Email:\t" + this.email);
+		System.out.println("Name:\t\t" + this.name);
+		System.out.println("IC no:\t\t" + this.icNo);
+		System.out.println("Email:\t\t" + this.email);
 		System.out.println("Contact No:\t" + this.contactNo);
-		System.out.println("Type of racing\t:" + this.typeOfRacing);
+		System.out.println("Type of racing:\t" + this.typeOfRacing);
 		
 	
 	}
 	public void printRegistration() {
-		System.out.println("Registration Fee: \t RM75000.00");		
+		System.out.println("Registration Fee: \t RM75000.00");
+		System.out.print("Customer Paid		: 	RM");
+		payment = input.nextDouble();
 			while(payment < 750000) {
 				System.out.println();
 				System.out.println("The Money Is Not Enough To Pay The Payment, Please Re-Enter Again!");

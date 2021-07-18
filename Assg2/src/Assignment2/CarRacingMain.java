@@ -36,6 +36,7 @@ public class CarRacingMain {
 
 				case 2:
 					Finance finance1 = new Finance();
+					finance1.printInfo();
 					finance1.setBusinessLicense(1000000);
 					finance1.setSalary(200000);
 					finance1.setMaintenance(300000);
@@ -44,7 +45,7 @@ public class CarRacingMain {
 					finance1.setEntryFee(600000);
 					finance1.setTicketFee(700000);
 					finance1.setSponsorship(100000000);
-					finance1.printInfo();
+					
 					break;
 				case 3:
 					providedCar Car1 = new providedCar();
@@ -65,7 +66,6 @@ public class CarRacingMain {
 			
 			case "Customer":
 				Customer client1 = new Customer();
-				client1.printInfo();
 				break;
 				
 		} return;
