@@ -12,11 +12,11 @@ public class Customer extends CarRacing implements Payment{	//Inheritance
 	public Customer() {
 		System.out.print("Contestant/Audience:\t");
 		this.Customer = input.next();
-		if (Customer == "Contestant" || Customer == "contestant") {
+		if (Customer.equals("Contestant") || Customer.equals("contestant")) {
 			System.out.println("-------------------REGISTRATION FORM-------------------");
 			System.out.print("Enter name: ");
 			this.name = input.next();
-			System.out.print("IC no");
+			System.out.print("IC no: ");
 			this.icNo = input.nextLong();
 			System.out.print("Enter your email: ");
 			this.email = input.next();
@@ -27,19 +27,19 @@ public class Customer extends CarRacing implements Payment{	//Inheritance
 			printInfo();
 			printRegistration();
 			
-		}else 
+		}else {
 			System.out.println("Audiance");
 			System.out.println("registration fee = RM100.00");
-			System.out.print("Yes / No : ");
+			System.out.println("Do you want to pay? (Yes or No)");
 			String payFee = input.next();
-			if (payFee == "yes" || payFee == "Yes") {
+			if (payFee.equals("Yes") || payFee.equals("yes")) {
 				System.out.println("Purchased Successfully!");
 			
-			}else if(payFee == "No" || payFee == "no"){
+			}else {
 				System.out.println("Purchased Failed!");
 			}
 	}
-	
+	}
 	
 	public void printInfo() {	//Polymorphism
 		System.out.println("Name:\t" + this.name);
